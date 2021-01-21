@@ -26,7 +26,7 @@ class ClassroomController extends Controller
      */
     public function create()
     {
-        //
+        return view('classrooms.create');
     }
 
     /**
@@ -48,7 +48,8 @@ class ClassroomController extends Controller
      */
     public function show($id)
     {
-        //
+        $classrooms= Classroom::find($id);
+        return view('classrooms.show', compact('classrooms'));
     }
 
     /**
